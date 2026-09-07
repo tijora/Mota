@@ -16,11 +16,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        display: ["Syne", "sans-serif"],
       },
       animation: {
         "premium-pulse": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        "slow-spin": "spin 20s linear infinite",
       },
     },
   },
@@ -28,4 +26,3 @@ const config: Config = {
 };
 
 export default config;
-
