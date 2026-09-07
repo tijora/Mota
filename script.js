@@ -939,10 +939,10 @@ function renderGrids() {
         if (!container) return;
         
         container.innerHTML = exercisesData[cat].map((ex, index) => `
-            <div class="hover-card bg-cardbg/60 rounded-3xl overflow-hidden border border-gold/20 flex flex-col justify-between cursor-pointer p-4" onclick="openExerciseModal('${cat}', ${index})">
+            <div class="hover-card bg-cardbg/60 rounded-3xl overflow-hidden border border-gold/20 flex flex-col justify-between cursor-pointer p-4 transition-all duration-300 hover:border-gold hover:scale-[1.02]" onclick="openExerciseModal('${cat}', ${index})">
                 <div>
-                    <div class="relative h-48 w-full rounded-2xl overflow-hidden mb-4">
-                        <img src="${ex.image}" alt="${ex.name}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop'" />
+                    <div class="relative h-48 w-full rounded-2xl overflow-hidden mb-4 border border-gold/10">
+                        <img src="${ex.image}" alt="${ex.name}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop'" />
                         <span class="absolute top-3 left-3 font-mono text-[10px] bg-darkbg/90 px-3 py-1 rounded-full border border-gold/30 text-gold uppercase tracking-widest font-bold">
                             ${ex.tag}
                         </span>
@@ -950,7 +950,10 @@ function renderGrids() {
                     <h3 class="text-xl font-black text-white mb-1 brand-font">${ex.name}</h3>
                     <p class="text-xs text-gold font-bold mb-2">TARGET: <span class="text-gray-300 font-normal">${ex.target}</span></p>
                 </div>
-                <p class="text-xs text-gray-400 border-t border-gold/10 pt-3 mt-2">Click card to view movement & target details →</p>
+                <p class="text-xs text-gray-400 border-t border-gold/10 pt-3 mt-2 flex items-center justify-between">
+                    <span>View Protocol & Bio-Mechanics</span>
+                    <span class="text-gold font-bold">→</span>
+                </p>
             </div>
         `).join('');
     });
@@ -1049,4 +1052,3 @@ function filterExercises() {
 
 // Run on Page Load
 document.addEventListener('DOMContentLoaded', renderGrids);
-
