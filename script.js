@@ -8,7 +8,9 @@ const workoutData = {
             movement: "Retract scapula, lower bar controlled to lower sternum, drive feet into floor, and press vertically to lock out.",
             intensity: "75-85% 1RM (4 Sets x 6-8 Reps)",
             image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
-            tag: "MASS BUILDER"
+            tag: "MASS BUILDER",
+            highlightColor: "text-red-500",
+            details: "Focuses heavily on core stabilization and full chest engagement. High strain on triceps during lockout."
         },
         {
             name: "Incline Dumbbell Press",
@@ -18,17 +20,9 @@ const workoutData = {
             movement: "Set incline to 30°. Keep elbows angled at 45°, lower weights for deep chest stretch, press upward in arc motion.",
             intensity: "Moderate / Heavy (4 Sets x 8-10 Reps)",
             image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
-            tag: "HYPERTROPHY"
-        },
-        {
-            name: "Weighted Chest Dips",
-            target: "Lower Chest & Triceps Brachii",
-            position: "Suspended Lean Forward",
-            equipment: "Dip Station & Weight Belt",
-            movement: "Lean torso 30° forward, lower body until upper arms parallel to floor, contract chest hard to press back up.",
-            intensity: "Bodyweight + Load (3 Sets x 8-12 Reps)",
-            image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&auto=format&fit=crop&q=80",
-            tag: "STRENGTH"
+            tag: "HYPERTROPHY",
+            highlightColor: "text-green-500",
+            details: "Isolates the upper chest muscles. Excellent for building upper chest volume and shoulder stability."
         }
     ],
     back: [
@@ -40,17 +34,9 @@ const workoutData = {
             movement: "Grip bar shoulder-width, wedge hips, pull slack out of bar, drive through floor maintaining rigid spine.",
             intensity: "80-90% 1RM (3 Sets x 5 Reps)",
             image: "https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?w=600&auto=format&fit=crop&q=80",
-            tag: "POWER"
-        },
-        {
-            name: "Lat Pulldown",
-            target: "Latissimus Dorsi (Width)",
-            position: "Seated Vertical Pull",
-            equipment: "Cable Pulldown Machine",
-            movement: "Grip wide, pull bar down towards upper sternum while driving elbows down and back, squeeze lat muscles.",
-            intensity: "Moderate (4 Sets x 10-12 Reps)",
-            image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
-            tag: "HYPERTROPHY"
+            tag: "POWER",
+            highlightColor: "text-red-500",
+            details: "Full posterior chain activator. Heavy pressure on lower back, hamstrings, and upper traps."
         }
     ],
     legs: [
@@ -62,17 +48,9 @@ const workoutData = {
             movement: "Bar across upper traps, flex hips and knees simultaneously, descend below parallel, drive up through heels.",
             intensity: "75-85% 1RM (4 Sets x 6-8 Reps)",
             image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
-            tag: "LEG CORE"
-        },
-        {
-            name: "Romanian Deadlift (RDL)",
-            target: "Hamstrings & Gluteal Complex",
-            position: "Soft Knee Hip Hinge",
-            equipment: "Barbell or Heavy Dumbbells",
-            movement: "Hinge at hips pushing glutes backward, lower weight along shins until hamstring tension peaks, extend hips.",
-            intensity: "Moderate Heavy (4 Sets x 8-10 Reps)",
-            image: "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=600&auto=format&fit=crop&q=80",
-            tag: "POSTERIOR CHAIN"
+            tag: "LEG CORE",
+            highlightColor: "text-green-500",
+            details: "Primary compound lower body exercise. High tension on quads and glutes."
         }
     ],
     arms: [
@@ -84,65 +62,141 @@ const workoutData = {
             movement: "Bar at upper chest level, brace core, press straight overhead clearing chin, lock out directly over shoulders.",
             intensity: "70-80% 1RM (4 Sets x 6-8 Reps)",
             image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=600&auto=format&fit=crop&q=80",
-            tag: "SHOULDERS"
-        },
+            tag: "SHOULDERS",
+            highlightColor: "text-red-500",
+            details: "Builds shoulder strength and core stability."
+        }
+    ],
+    bodyweight: [
         {
-            name: "Incline Dumbbell Bicep Curl",
-            target: "Biceps Brachii (Long Head)",
-            position: "Seated Incline (60 Degrees)",
-            equipment: "Incline Bench & Dumbbells",
-            movement: "Sit back on incline, let arms hang fully extended, curl dumbbells keeping elbows stationary throughout movement.",
-            intensity: "Moderate (3 Sets x 10-12 Reps)",
-            image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
-            tag: "BICEPS"
+            name: "Classic Diamond Pushup",
+            target: "Triceps Brachii & Inner Pectoralis",
+            position: "Prone Plank Position",
+            equipment: "Bodyweight Only",
+            movement: "Place hands together forming a diamond under chest. Lower chest down keeping elbows close, press up explosively.",
+            intensity: "Bodyweight (4 Sets x 12-15 Reps)",
+            image: "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
+            tag: "BODYWEIGHT",
+            highlightColor: "text-green-500",
+            details: "High triceps activation with intense inner chest contraction."
+        }
+    ],
+    recovery: [
+        {
+            name: "Percussive Foam Rolling",
+            target: "Myofascial Release & Lactic Acid Removal",
+            position: "Floor Mat Rest",
+            equipment: "Foam Roller / Massage Gun",
+            movement: "Slowly roll targeted muscle group back and forth over tight spots for 30-60 seconds to release tension.",
+            intensity: "Low Intensity Recovery (10-15 Mins)",
+            image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop&q=80",
+            tag: "RECOVERY",
+            highlightColor: "text-green-500",
+            details: "Increases blood circulation, reduces muscle soreness, and improves flexibility."
         }
     ]
 };
 
+// Render Exercises Cards
 function renderCategory(items, elementId) {
     const container = document.getElementById(elementId);
     if (!container) return;
     
-    container.innerHTML = items.map(ex => `
-        <div class="hover-card bg-[#1F2833]/20 rounded-3xl overflow-hidden border border-[#C5A059]/10 bg-opacity-30 flex flex-col justify-between">
+    container.innerHTML = items.map((ex, index) => `
+        <div class="hover-card bg-cardbg/40 rounded-3xl overflow-hidden border border-gold/20 flex flex-col justify-between cursor-pointer" onclick="openModal('${elementId}', ${index})">
             <div>
                 <div class="relative h-48 w-full overflow-hidden">
                     <img src="${ex.image}" alt="${ex.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-                    <span class="absolute top-4 left-4 font-mono text-[10px] tracking-widest uppercase bg-[#0B0C10]/80 backdrop-blur-md px-3 py-1 rounded-full border border-[#C5A059]/30 text-[#C5A059]">
+                    <span class="absolute top-4 left-4 font-mono text-[10px] tracking-widest uppercase bg-darkbg/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold/30 text-gold">
                         ${ex.tag}
                     </span>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-2xl font-black text-white mb-2">${ex.name}</h3>
-                    <p class="font-mono text-xs tracking-wider uppercase text-[#FF2E63] mb-1">
+                    <h3 class="text-xl font-black text-white mb-2">${ex.name}</h3>
+                    <p class="font-mono text-xs tracking-wider uppercase ${ex.highlightColor} mb-1">
                         TARGET: <span class="text-white/80">${ex.target}</span>
                     </p>
-                    <p class="font-mono text-xs tracking-wider uppercase text-[#C5A059] mb-4">
-                        POSITION: <span class="text-white/80">${ex.position}</span>
-                    </p>
-                    <p class="text-[#E5E5E5]/70 text-xs leading-relaxed font-light mb-6">
-                        ${ex.movement}
-                    </p>
-                </div>
-            </div>
-            <div class="p-6 pt-0 border-t border-[#E5E5E5]/10 mt-auto grid grid-cols-2 gap-2 text-[10px] font-bold tracking-widest uppercase">
-                <div class="pt-4">
-                    <span class="text-[#E5E5E5]/40 block mb-1">EQUIPMENT</span>
-                    <span class="text-white">${ex.equipment}</span>
-                </div>
-                <div class="pt-4">
-                    <span class="text-[#E5E5E5]/40 block mb-1">INTENSITY</span>
-                    <span class="text-white">${ex.intensity}</span>
+                    <p class="text-xs text-gray-400 mt-2">Click card to view movement & target details &rarr;</p>
                 </div>
             </div>
         </div>
     `).join('');
 }
 
+// Open Modal Dialog
+function openModal(category, index) {
+    const ex = workoutData[category.replace('-grid', '')][index];
+    const modal = document.getElementById('exercise-modal');
+    const content = document.getElementById('modal-content');
+
+    content.innerHTML = `
+        <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-gold font-mono text-xs mb-3">${ex.tag}</span>
+        <h2 class="text-3xl font-black mb-4">${ex.name}</h2>
+        <img src="${ex.image}" class="w-full h-56 object-cover rounded-2xl mb-6 border border-gold/20" />
+        
+        <div class="space-y-4 text-sm">
+            <div>
+                <span class="block font-bold text-gold uppercase text-xs">Target Muscle Group:</span>
+                <p class="${ex.highlightColor} font-semibold">${ex.target}</p>
+            </div>
+            <div>
+                <span class="block font-bold text-gold uppercase text-xs">Movement Protocol:</span>
+                <p class="text-gray-300 leading-relaxed">${ex.movement}</p>
+            </div>
+            <div>
+                <span class="block font-bold text-gold uppercase text-xs">Muscle Pressure & Bio-Mechanics:</span>
+                <p class="text-gray-300">${ex.details}</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-gray-700 text-xs">
+                <div>
+                    <span class="text-gray-400 block">POSITION:</span>
+                    <span>${ex.position}</span>
+                </div>
+                <div>
+                    <span class="text-gray-400 block">INTENSITY:</span>
+                    <span>${ex.intensity}</span>
+                </div>
+            </div>
+        </div>
+    `;
+
+    modal.classList.remove('hidden');
+}
+
+// Close Modal
+document.getElementById('close-modal').addEventListener('click', () => {
+    document.getElementById('exercise-modal').classList.add('hidden');
+});
+
+// Search Filter
+document.getElementById('search-input').addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase();
+    Object.keys(workoutData).forEach(key => {
+        const filtered = workoutData[key].filter(ex => 
+            ex.name.toLowerCase().includes(query) || 
+            ex.target.toLowerCase().includes(query)
+        );
+        renderCategory(filtered, `${key}-grid`);
+    });
+});
+
+// Dark / Light Theme Toggle
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-toggle-icon');
+
+themeToggleBtn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    document.documentElement.classList.toggle('light');
+    themeIcon.textContent = document.documentElement.classList.contains('dark') ? '🌙' : '☀️';
+});
+
+// Initial Render
 document.addEventListener('DOMContentLoaded', () => {
     renderCategory(workoutData.chest, 'chest-grid');
     renderCategory(workoutData.back, 'back-grid');
     renderCategory(workoutData.legs, 'legs-grid');
     renderCategory(workoutData.arms, 'arms-grid');
+    renderCategory(workoutData.bodyweight, 'bodyweight-grid');
+    renderCategory(workoutData.recovery, 'recovery-grid');
 });
 
