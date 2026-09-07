@@ -1,202 +1,184 @@
 const workoutData = {
+    shoulders: [
+        {
+            name: "Overhead Military Press",
+            target: "Anterior & Lateral Deltoids",
+            position: "Standing Upright",
+            equipment: "Barbell / Dumbbells",
+            movement: "Keep core locked, press bar directly overhead clearing chin, extend arms without arching lower back.",
+            intensity: "75% 1RM (4 Sets x 8 Reps)",
+            image: "https://upload.wikimedia.org/wikipedia/commons/5/52/Military-press-1.png",
+            gifCorrect: "https://upload.wikimedia.org/wikipedia/commons/8/82/Military_press_animation.gif",
+            gifWrong: "https://upload.wikimedia.org/wikipedia/commons/5/52/Military-press-1.png",
+            tag: "SHOULDER",
+            correctFormText: "✓ کمر سیدھی رکھیں، کور ٹائٹ ہو اور بار کو بالکل برابری سے سر کے اوپر لائیں۔",
+            wrongFormText: "✕ کمر کو پیچھے زیادہ نہ موڑیں (Over-arching) اور جھٹکے سے وزن اوپر نہ اٹھائیں۔"
+        }
+    ],
     chest: [
         {
             name: "Barbell Bench Press",
-            target: "Mid & Lower Pectoralis Major",
-            position: "Flat Bench (Supine Position)",
-            equipment: "Olympic Barbell & Bench",
-            movement: "Retract scapula, lower bar controlled to lower sternum, drive feet into floor, and press vertically to lock out.",
-            intensity: "75-85% 1RM (4 Sets x 6-8 Reps)",
-            image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
-            tag: "MASS BUILDER",
-            highlightColor: "text-red-500",
-            details: "Focuses heavily on core stabilization and full chest engagement. High strain on triceps during lockout."
-        },
-        {
-            name: "Incline Dumbbell Press",
-            target: "Upper Pectoralis (Clavicular Head)",
-            position: "Incline Bench (30 to 45 Degrees)",
-            equipment: "Adjustable Bench & Dumbbells",
-            movement: "Set incline to 30°. Keep elbows angled at 45°, lower weights for deep chest stretch, press upward in arc motion.",
-            intensity: "Moderate / Heavy (4 Sets x 8-10 Reps)",
-            image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
-            tag: "HYPERTROPHY",
-            highlightColor: "text-green-500",
-            details: "Isolates the upper chest muscles. Excellent for building upper chest volume and shoulder stability."
+            target: "Pectoralis Major",
+            position: "Flat Bench",
+            equipment: "Barbell & Bench",
+            movement: "Retract shoulder blades, lower bar slowly to mid-chest level, and press up smoothly.",
+            intensity: "80% 1RM (4 Sets x 6 Reps)",
+            image: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Bench-press-1.png",
+            gifCorrect: "https://upload.wikimedia.org/wikipedia/commons/9/91/Bench_press_animation.gif",
+            gifWrong: "https://upload.wikimedia.org/wikipedia/commons/b/b3/Bench-press-1.png",
+            tag: "CHEST",
+            correctFormText: "✓ پاؤں زمین پر جمائے رکھیں اور باربل کو کنٹرولڈ رفتار میں سینے تک لائیں۔",
+            wrongFormText: "✕ باربل کو سینے پر نہ اچھالیں اور کوہنیاں بہت زیادہ باہر نہ پھیلاؤ۔"
         }
     ],
     back: [
         {
             name: "Conventional Deadlift",
-            target: "Erector Spinae, Latissimus Dorsi, Glutes",
-            position: "Standing Hip Hinge",
-            equipment: "Olympic Barbell & Bumper Plates",
-            movement: "Grip bar shoulder-width, wedge hips, pull slack out of bar, drive through floor maintaining rigid spine.",
-            intensity: "80-90% 1RM (3 Sets x 5 Reps)",
-            image: "https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?w=600&auto=format&fit=crop&q=80",
-            tag: "POWER",
-            highlightColor: "text-red-500",
-            details: "Full posterior chain activator. Heavy pressure on lower back, hamstrings, and upper traps."
+            target: "Erector Spinae, Glutes, Lats",
+            position: "Standing Pull",
+            equipment: "Barbell & Heavy Plates",
+            movement: "Keep spine neutral, drive hips forward, pull bar along shins until standing erect.",
+            intensity: "85% 1RM (3 Sets x 5 Reps)",
+            image: "https://upload.wikimedia.org/wikipedia/commons/8/88/Deadlift_animation_loop.gif",
+            gifCorrect: "https://upload.wikimedia.org/wikipedia/commons/8/88/Deadlift_animation_loop.gif",
+            gifWrong: "https://upload.wikimedia.org/wikipedia/commons/8/88/Deadlift_animation_loop.gif",
+            tag: "DEADLIFT",
+            correctFormText: "✓ کمر کو بالکل سیدھا رکھیں، بار کو ٹانگوں کے قریب رکھ کر اوپر کھینچیں۔",
+            wrongFormText: "✕ کمر کو گول (Round Back) نہ کریں ورنہ ڈسک انجری ہو سکتی ہے۔"
         }
     ],
     legs: [
         {
             name: "Barbell Back Squat",
-            target: "Quadriceps, Gluteus Maximus",
-            position: "Upright Squat Stance",
-            equipment: "Squat Rack & Olympic Barbell",
-            movement: "Bar across upper traps, flex hips and knees simultaneously, descend below parallel, drive up through heels.",
-            intensity: "75-85% 1RM (4 Sets x 6-8 Reps)",
-            image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
-            tag: "LEG CORE",
-            highlightColor: "text-green-500",
-            details: "Primary compound lower body exercise. High tension on quads and glutes."
+            target: "Quadriceps & Glutes",
+            position: "Upright Stance",
+            equipment: "Barbell & Squat Rack",
+            movement: "Sit back into hips, lower thighs below parallel to floor, drive through heels to stand.",
+            intensity: "75% 1RM (4 Sets x 8 Reps)",
+            image: "https://upload.wikimedia.org/wikipedia/commons/8/82/Squats.gif",
+            gifCorrect: "https://upload.wikimedia.org/wikipedia/commons/8/82/Squats.gif",
+            gifWrong: "https://upload.wikimedia.org/wikipedia/commons/8/82/Squats.gif",
+            tag: "LEGS",
+            correctFormText: "✓ گھٹنوں کو پنجوں کی سمت میں رکھیں اور مکمل نیچے (Parallel) جائیں۔",
+            wrongFormText: "✕ گھٹنوں کو اندر کی طرف نہ جھکنے دیں اور ہیلس نہ اٹھائیں۔"
         }
     ],
-    arms: [
+    core: [
         {
-            name: "Overhead Barbell Press",
-            target: "Anterior & Lateral Deltoids",
-            position: "Standing Vertical Press",
-            equipment: "Barbell & Power Rack",
-            movement: "Bar at upper chest level, brace core, press straight overhead clearing chin, lock out directly over shoulders.",
-            intensity: "70-80% 1RM (4 Sets x 6-8 Reps)",
-            image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=600&auto=format&fit=crop&q=80",
-            tag: "SHOULDERS",
-            highlightColor: "text-red-500",
-            details: "Builds shoulder strength and core stability."
+            name: "Hanging Leg Raise",
+            target: "Lower Abs & Hip Flexors",
+            position: "Hanging Pull-Up Bar",
+            equipment: "Pull-Up Bar",
+            movement: "Grip bar, flex abs, lift legs up to 90 degrees without swinging body.",
+            intensity: "Bodyweight (4 Sets x 12 Reps)",
+            image: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Hanging_leg_raise_animation.gif",
+            gifCorrect: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Hanging_leg_raise_animation.gif",
+            gifWrong: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Hanging_leg_raise_animation.gif",
+            tag: "ABS",
+            correctFormText: "✓ جسم کا جھولا (Momentum) نہ بننے دیں، پیٹ کے پٹھوں سے ٹانگیں اوپر اٹھائیں۔",
+            wrongFormText: "✕ تیز تیز جھٹکے مت دیں۔"
         }
     ],
-    bodyweight: [
+    neck: [
         {
-            name: "Classic Diamond Pushup",
-            target: "Triceps Brachii & Inner Pectoralis",
-            position: "Prone Plank Position",
-            equipment: "Bodyweight Only",
-            movement: "Place hands together forming a diamond under chest. Lower chest down keeping elbows close, press up explosively.",
-            intensity: "Bodyweight (4 Sets x 12-15 Reps)",
-            image: "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
-            tag: "BODYWEIGHT",
-            highlightColor: "text-green-500",
-            details: "High triceps activation with intense inner chest contraction."
-        }
-    ],
-    recovery: [
-        {
-            name: "Percussive Foam Rolling",
-            target: "Myofascial Release & Lactic Acid Removal",
-            position: "Floor Mat Rest",
-            equipment: "Foam Roller / Massage Gun",
-            movement: "Slowly roll targeted muscle group back and forth over tight spots for 30-60 seconds to release tension.",
-            intensity: "Low Intensity Recovery (10-15 Mins)",
-            image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop&q=80",
-            tag: "RECOVERY",
-            highlightColor: "text-green-500",
-            details: "Increases blood circulation, reduces muscle soreness, and improves flexibility."
+            name: "Barbell Shrugs",
+            target: "Upper Trapezius & Neck",
+            position: "Standing Upright",
+            equipment: "Heavy Barbell",
+            movement: "Hold barbell at thigh level, raise shoulders straight up toward ears, squeeze traps.",
+            intensity: "70% 1RM (4 Sets x 12 Reps)",
+            image: "https://upload.wikimedia.org/wikipedia/commons/1/13/Shrugs.gif",
+            gifCorrect: "https://upload.wikimedia.org/wikipedia/commons/1/13/Shrugs.gif",
+            gifWrong: "https://upload.wikimedia.org/wikipedia/commons/1/13/Shrugs.gif",
+            tag: "NECK / TRAPS",
+            correctFormText: "✓ کندھوں کو سیدھا اوپر کانوں کی طرف لائیں اور اوپر ایک سیکنڈ ہولڈ کریں۔",
+            wrongFormText: "✕ کندھوں کو گول گول نہ گھمائیں (Do not roll shoulders)۔"
         }
     ]
 };
 
-// Render Exercises Cards
 function renderCategory(items, elementId) {
     const container = document.getElementById(elementId);
     if (!container) return;
     
     container.innerHTML = items.map((ex, index) => `
-        <div class="hover-card bg-cardbg/40 rounded-3xl overflow-hidden border border-gold/20 flex flex-col justify-between cursor-pointer" onclick="openModal('${elementId}', ${index})">
+        <div class="hover-card bg-cardbg/40 rounded-3xl overflow-hidden border border-gold/20 flex flex-col justify-between cursor-pointer p-4" onclick="openModal('${elementId}', ${index})">
+            <div class="relative h-44 w-full rounded-2xl overflow-hidden mb-3">
+                <img src="${ex.image}" alt="${ex.name}" class="w-full h-full object-cover" />
+                <span class="absolute top-2 left-2 font-mono text-[10px] bg-darkbg/90 px-3 py-1 rounded-full border border-gold/30 text-gold">
+                    ${ex.tag}
+                </span>
+            </div>
             <div>
-                <div class="relative h-48 w-full overflow-hidden">
-                    <img src="${ex.image}" alt="${ex.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-                    <span class="absolute top-4 left-4 font-mono text-[10px] tracking-widest uppercase bg-darkbg/80 backdrop-blur-md px-3 py-1 rounded-full border border-gold/30 text-gold">
-                        ${ex.tag}
-                    </span>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-black text-white mb-2">${ex.name}</h3>
-                    <p class="font-mono text-xs tracking-wider uppercase ${ex.highlightColor} mb-1">
-                        TARGET: <span class="text-white/80">${ex.target}</span>
-                    </p>
-                    <p class="text-xs text-gray-400 mt-2">Click card to view movement & target details &rarr;</p>
-                </div>
+                <h3 class="text-lg font-black text-white mb-1">${ex.name}</h3>
+                <p class="text-xs text-gold">Target: <span class="text-white">${ex.target}</span></p>
+                <p class="text-[11px] text-gray-400 mt-2">کلک کریں: GIF اور صحیح/غلط فارم دیکھیں &rarr;</p>
             </div>
         </div>
     `).join('');
 }
 
-// Open Modal Dialog
-function openModal(category, index) {
-    const ex = workoutData[category.replace('-grid', '')][index];
+let activeFormTab = 'correct';
+
+function openModal(categoryKey, index) {
+    const cat = categoryKey.replace('-grid', '');
+    const ex = workoutData[cat][index];
     const modal = document.getElementById('exercise-modal');
     const content = document.getElementById('modal-content');
 
-    content.innerHTML = `
-        <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-gold font-mono text-xs mb-3">${ex.tag}</span>
-        <h2 class="text-3xl font-black mb-4">${ex.name}</h2>
-        <img src="${ex.image}" class="w-full h-56 object-cover rounded-2xl mb-6 border border-gold/20" />
-        
-        <div class="space-y-4 text-sm">
-            <div>
-                <span class="block font-bold text-gold uppercase text-xs">Target Muscle Group:</span>
-                <p class="${ex.highlightColor} font-semibold">${ex.target}</p>
-            </div>
-            <div>
-                <span class="block font-bold text-gold uppercase text-xs">Movement Protocol:</span>
-                <p class="text-gray-300 leading-relaxed">${ex.movement}</p>
-            </div>
-            <div>
-                <span class="block font-bold text-gold uppercase text-xs">Muscle Pressure & Bio-Mechanics:</span>
-                <p class="text-gray-300">${ex.details}</p>
-            </div>
-            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-gray-700 text-xs">
-                <div>
-                    <span class="text-gray-400 block">POSITION:</span>
-                    <span>${ex.position}</span>
-                </div>
-                <div>
-                    <span class="text-gray-400 block">INTENSITY:</span>
-                    <span>${ex.intensity}</span>
-                </div>
-            </div>
-        </div>
-    `;
-
+    window.currentEx = ex;
+    activeFormTab = 'correct';
+    
+    updateModalUI();
     modal.classList.remove('hidden');
 }
 
-// Close Modal
+function updateModalUI() {
+    const ex = window.currentEx;
+    const content = document.getElementById('modal-content');
+    
+    content.innerHTML = `
+        <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-gold font-mono text-xs mb-2">${ex.tag}</span>
+        <h2 class="text-2xl font-black mb-4">${ex.name}</h2>
+        
+        <div class="flex gap-2 mb-3">
+            <button onclick="switchForm('correct')" class="flex-1 py-2 rounded-xl font-bold text-xs ${activeFormTab === 'correct' ? 'bg-emerald-600 text-white' : 'bg-gray-800 text-gray-400'}">
+                ✓ صحیح طریقہ (Correct Form)
+            </button>
+            <button onclick="switchForm('wrong')" class="flex-1 py-2 rounded-xl font-bold text-xs ${activeFormTab === 'wrong' ? 'bg-rose-600 text-white' : 'bg-gray-800 text-gray-400'}">
+                ✕ غلط طریقہ (Wrong Form)
+            </button>
+        </div>
+
+        <div class="relative h-60 w-full rounded-2xl overflow-hidden mb-4 border border-gold/20 bg-black flex items-center justify-center">
+            <img src="${activeFormTab === 'correct' ? ex.gifCorrect : ex.gifWrong}" class="h-full object-contain" />
+        </div>
+
+        <div class="p-3 rounded-xl mb-4 text-xs font-semibold ${activeFormTab === 'correct' ? 'bg-emerald-950/60 border border-emerald-500/30 text-emerald-300' : 'bg-rose-950/60 border border-rose-500/30 text-rose-300'}">
+            ${activeFormTab === 'correct' ? ex.correctFormText : ex.wrongFormText}
+        </div>
+
+        <div class="space-y-3 text-xs text-gray-300 border-t border-gray-800 pt-3">
+            <p><strong class="text-gold uppercase">Target Muscle:</strong> ${ex.target}</p>
+            <p><strong class="text-gold uppercase">Movement:</strong> ${ex.movement}</p>
+            <div class="grid grid-cols-2 gap-2 pt-2 text-[11px]">
+                <div><span class="text-gray-400">POSITION:</span> ${ex.position}</div>
+                <div><span class="text-gray-400">INTENSITY:</span> ${ex.intensity}</div>
+            </div>
+        </div>
+    `;
+}
+
+function switchForm(type) {
+    activeFormTab = type;
+    updateModalUI();
+}
+
 document.getElementById('close-modal').addEventListener('click', () => {
     document.getElementById('exercise-modal').classList.add('hidden');
 });
 
-// Search Filter
-document.getElementById('search-input').addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase();
-    Object.keys(workoutData).forEach(key => {
-        const filtered = workoutData[key].filter(ex => 
-            ex.name.toLowerCase().includes(query) || 
-            ex.target.toLowerCase().includes(query)
-        );
-        renderCategory(filtered, `${key}-grid`);
-    });
-});
-
-// Dark / Light Theme Toggle
-const themeToggleBtn = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-toggle-icon');
-
-themeToggleBtn.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    document.documentElement.classList.toggle('light');
-    themeIcon.textContent = document.documentElement.classList.contains('dark') ? '🌙' : '☀️';
-});
-
-// Initial Render
 document.addEventListener('DOMContentLoaded', () => {
-    renderCategory(workoutData.chest, 'chest-grid');
-    renderCategory(workoutData.back, 'back-grid');
-    renderCategory(workoutData.legs, 'legs-grid');
-    renderCategory(workoutData.arms, 'arms-grid');
-    renderCategory(workoutData.bodyweight, 'bodyweight-grid');
-    renderCategory(workoutData.recovery, 'recovery-grid');
+    Object.keys(workoutData).forEach(key => renderCategory(workoutData[key], `${key}-grid`));
 });
 
