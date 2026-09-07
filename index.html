@@ -1,135 +1,101 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOTA Fitness Architecture</title>
-    <!-- Tailwind CSS CDN -->
+    <title>MOTA Fitness - Ultra Premium Workout Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        darkbg: '#0a0a0a',
-                        cardbg: '#121212',
-                        gold: '#d4af37'
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
-        .brand-font { font-family: 'Montserrat', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; background: #0B0C10; color: #E5E5E5; }
+        h1, h2, h3 { font-family: 'Syne', sans-serif; }
+        .gradient-text { background: linear-gradient(to bottom, #FFFFFF, #E5E5E5, #1F2833); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-glow-1 { position: absolute; top: -10%; left: -10%; width: 500px; height: 500px; background: rgba(255, 46, 99, 0.12); filter: blur(120px); border-radius: 50%; z-index: 0; pointer-events: none; }
+        .hero-glow-2 { position: absolute; bottom: -10%; right: -10%; width: 600px; height: 600px; background: rgba(197, 160, 89, 0.12); filter: blur(120px); border-radius: 50%; z-index: 0; pointer-events: none; }
+        .hover-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(197, 160, 89, 0.15); }
+        .hover-card:hover { transform: translateY(-8px); border-color: rgba(197, 160, 89, 0.5); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); }
     </style>
 </head>
-<body class="bg-darkbg text-white min-h-screen font-sans pb-12 transition-colors duration-300">
+<body class="overflow-x-hidden">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
 
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-40 bg-darkbg/90 backdrop-blur-md border-b border-gold/20 px-4 py-4 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="flex items-center gap-2">
-            <span class="text-gold font-black text-2xl tracking-tighter brand-font">▲ MOTA</span>
+    <nav class="fixed top-6 inset-x-0 z-50 max-w-6xl mx-auto px-6 py-4 rounded-full bg-[#0B0C10]/70 backdrop-blur-2xl border border-[#C5A059]/20 shadow-[0_0_30px_rgba(0,0,0,0.5)] flex items-center justify-between">
+        <!-- Updated Logo Start -->
+        <a href="#" class="flex items-center gap-3 group">
+            <div class="relative flex items-center justify-center">
+                <svg class="w-9 h-9 text-[#FF2E63] transform group-hover:scale-110 transition-transform duration-300" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Stylized 'M' Emblem -->
+                    <path d="M15 80 L35 20 L50 50 L65 20 L85 80" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Inner Golden Accent Bolt -->
+                    <path d="M50 45 L40 65 L55 65 L45 85" stroke="#C5A059" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span class="text-3xl font-black tracking-tighter text-white font-['Syne']">MOTA</span>
+        </a>
+        <!-- Updated Logo End -->
+
+        <div class="hidden md:flex gap-8 text-xs font-bold tracking-widest text-[#E5E5E5]/70">
+            <a href="#chest" class="hover:text-[#C5A059] transition-colors">CHEST</a>
+            <a href="#back" class="hover:text-[#C5A059] transition-colors">BACK</a>
+            <a href="#legs" class="hover:text-[#C5A059] transition-colors">LEGS</a>
+            <a href="#arms" class="hover:text-[#C5A059] transition-colors">ARMS & SHOULDERS</a>
         </div>
-        <div class="flex items-center gap-3">
-            <!-- Theme Toggle Button -->
-            <button id="theme-toggle" onclick="toggleTheme()" class="bg-cardbg border border-gold/30 p-2.5 rounded-full text-lg hover:border-gold transition-all">
-                🌙
-            </button>
-            <a href="#contact" class="bg-gold text-black font-extrabold text-xs px-5 py-2.5 rounded-full uppercase tracking-wider hover:bg-white transition-all">
-                Join Elite
+        <button onclick="alert('Welcome to MOTA Elite Protocol')" class="px-6 py-3 rounded-full bg-[#C5A059] text-[#0B0C10] font-black text-xs tracking-widest hover:bg-white transition-all">
+            JOIN ELITE
+        </button>
+    </nav>
+
+    <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
+        <div class="relative z-10 max-w-5xl mx-auto">
+            <span class="text-[#C5A059] font-mono tracking-[0.4em] uppercase text-xs mb-4 block">
+                ULTRA-PREMIUM FITNESS ARCHITECTURE
+            </span>
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none gradient-text">
+                FORGE YOUR LEGACY
+            </h1>
+            <p class="text-[#E5E5E5]/70 text-base md:text-lg max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Complete A-Z exercise library with positions, targets, equipment, and visual execution guides.
+            </p>
+            <a href="#chest" class="inline-block px-10 py-5 rounded-full bg-[#FF2E63] text-white font-black text-xs tracking-widest hover:bg-[#0B0C10] border border-[#FF2E63] hover:border-white transition-all shadow-[0_0_30px_rgba(255,46,99,0.3)]">
+                EXPLORE WORKOUTS
             </a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto text-center px-4 pt-10 pb-6">
-        <span class="text-gold text-[10px] font-mono tracking-widest uppercase font-bold">Ultra-Premium Fitness Architecture</span>
-        <h1 class="text-4xl md:text-6xl font-black brand-font tracking-tight mt-2 mb-4">FORGE YOUR LEGACY</h1>
-        <p class="text-gray-400 text-xs md:text-sm max-w-2xl mx-auto mb-8">
-            Complete workout library featuring pushups, weight training, bodyweight protocols, and muscle recovery techniques.
-        </p>
-
-        <!-- Search Bar -->
-        <div class="relative max-w-xl mx-auto mb-10">
-            <input type="text" id="search-input" onkeyup="filterExercises()" placeholder="Search exercises, muscles, or equipment..." 
-                class="w-full bg-cardbg border border-gold/30 rounded-2xl px-5 py-3.5 text-sm text-white focus:outline-none focus:border-gold placeholder-gray-500">
         </div>
     </section>
 
-    <!-- Main Workout Protocols Container -->
-    <main class="max-w-7xl mx-auto px-4 space-y-12">
-
-        <!-- Chest Section -->
-        <section>
-            <h2 class="text-2xl font-black text-gold brand-font mb-4 border-b border-gold/20 pb-2">CHEST PROTOCOLS</h2>
-            <div id="chest-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-
-        <!-- Back Section -->
-        <section>
-            <h2 class="text-2xl font-black text-gold brand-font mb-4 border-b border-gold/20 pb-2">BACK & LATS PROTOCOLS</h2>
-            <div id="back-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-
-        <!-- Shoulders Section -->
-        <section>
-            <h2 class="text-2xl font-black text-gold brand-font mb-4 border-b border-gold/20 pb-2">ARMS & SHOULDERS</h2>
-            <div id="shoulders-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-
-        <!-- Biceps Section -->
-        <section>
-            <h2 class="text-2xl font-black text-gold brand-font mb-4 border-b border-gold/20 pb-2">BICEPS PROTOCOLS</h2>
-            <div id="biceps-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-
-        <!-- Triceps Section -->
-        <section>
-            <h2 class="text-2xl font-black text-gold brand-font mb-4 border-b border-gold/20 pb-2">TRICEPS PROTOCOLS</h2>
-            <div id="triceps-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-
-        <!-- Legs Section -->
-        <section>
-            <h2 class="text-2xl font-black text-gold brand-font mb-4 border-b border-gold/20 pb-2">LEGS & LOWER BODY</h2>
-            <div id="legs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-
-        <!-- Abs/Core Section -->
-        <section>
-            <h2 class="text-2xl font-black text-gold brand-font mb-4 border-b border-gold/20 pb-2">BODYWEIGHT & CORE</h2>
-            <div id="core-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-
-        <!-- Recovery / Cardio Section -->
-        <section>
-            <h2 class="text-2xl font-black text-gold brand-font mb-4 border-b border-gold/20 pb-2">CARDIO & RECOVERY</h2>
-            <div id="recovery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-
-    </main>
-
-    <!-- Exercise Modal Popup -->
-    <div id="exercise-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-cardbg border border-gold/40 rounded-3xl max-w-lg w-full p-6 relative max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">✕</button>
-            <div id="modal-content"></div>
+    <section id="chest" class="relative z-10 max-w-7xl mx-auto px-6 py-20 border-t border-[#E5E5E5]/10">
+        <div class="mb-12">
+            <span class="text-[#FF2E63] font-mono tracking-[0.3em] uppercase text-xs">MODULE 01</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mt-2 tracking-tighter">CHEST PROTOCOLS</h2>
         </div>
-    </div>
+        <div id="chest-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
 
-    <!-- Contact Footer -->
-    <footer id="contact" class="max-w-4xl mx-auto text-center mt-20 pt-10 border-t border-gold/20 px-4">
-        <h3 class="text-2xl font-black text-white brand-font mb-2">GET IN TOUCH</h3>
-        <p class="text-xs text-gray-400 mb-6">Have questions about our training protocols or membership?</p>
-        <a href="mailto:lawangenter@gmail.com" class="inline-block bg-rose-600 text-white font-bold text-xs px-8 py-3.5 rounded-full hover:bg-rose-700 transition-all">
-            lawangenter@gmail.com
-        </a>
-        <p class="text-[10px] text-gray-600 mt-8">© 2026 MOTA FITNESS ARCHITECTURE. ALL RIGHTS RESERVED.</p>
-    </footer>
+    <section id="back" class="relative z-10 max-w-7xl mx-auto px-6 py-20 border-t border-[#E5E5E5]/10">
+        <div class="mb-12">
+            <span class="text-[#C5A059] font-mono tracking-[0.3em] uppercase text-xs">MODULE 02</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mt-2 tracking-tighter">BACK & LATS PROTOCOLS</h2>
+        </div>
+        <div id="back-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
 
-    <!-- JavaScript File with Defer Attribute -->
-    <script src="script.js" defer></script>
+    <section id="legs" class="relative z-10 max-w-7xl mx-auto px-6 py-20 border-t border-[#E5E5E5]/10">
+        <div class="mb-12">
+            <span class="text-[#FF2E63] font-mono tracking-[0.3em] uppercase text-xs">MODULE 03</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mt-2 tracking-tighter">LEGS & LOWER BODY</h2>
+        </div>
+        <div id="legs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+
+    <section id="arms" class="relative z-10 max-w-7xl mx-auto px-6 py-20 border-t border-[#E5E5E5]/10">
+        <div class="mb-12">
+            <span class="text-[#C5A059] font-mono tracking-[0.3em] uppercase text-xs">MODULE 04</span>
+            <h2 class="text-4xl md:text-5xl font-black text-white mt-2 tracking-tighter">ARMS & SHOULDERS</h2>
+        </div>
+        <div id="arms-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
